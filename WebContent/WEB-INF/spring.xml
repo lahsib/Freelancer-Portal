@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+
+    <bean id="dataSource" destroy-method="close"
+          class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/college_project"/>
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
+        <property name="initialSize" value="3"/>
+    </bean>
+
+    <bean class="com.bishal.collegeProject.dao.UserTypeDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean class="com.bishal.collegeProject.dao.UserDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+
+    <tx:annotation-driven transaction-manager="txManager"/>
+    <bean id="txManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+   <!-- <security:http auto-config="true" use-expressions="true">
+
+        <security:intercept-url access="permitAll" pattern="/login"/>
+        <security:access-denied-handler error-page="/403page" />
+        <security:intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')" />
+        <security:intercept-url pattern="/user**" access="hasRole('ROLE_USER')" />
+        <security:form-login
+                login-page="/login"
+                username-parameter="username"
+                password-parameter="password"
+                default-target-url="/admin"
+                authentication-failure-url="/login?authfailed" />
+        <security:logout logout-success-url="/login?logout" />
+    </security:http>
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query="select username,password, enabled from users where username=?"
+                               authorities-by-username-query="select username, role from user_roles where username =?  " />
+            &lt;!&ndash;<security:user-service>
+                <security:user name="bishal" password="bishal" authorities="ROLE_ADMIN"/>
+                <security:user name="admin" password="admin" authorities="ROLE_USER"/>
+            </security:user-service>&ndash;&gt;
+        </security:authentication-provider>
+
+    </security:authentication-manager>-->
+
+
+</beans>
