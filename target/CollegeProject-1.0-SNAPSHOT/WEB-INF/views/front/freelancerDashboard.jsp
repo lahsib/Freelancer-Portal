@@ -1,37 +1,10 @@
 <%@include file="../../includes/front/header.jsp"%>
+<%@include file="../../includes/front/sidebar.jsp"%>
 
-
-<div class="section db">
-    <div class="container">
-        <div class="page-title text-center">
-            <div class="heading-holder">
-                <h1>Dashboard</h1>
-            </div>
-            <p class="lead">Hello there, this is your private dashboard.</p>
-        </div>
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<div class="section lb">
-    <div class="container">
-        <div class="row">
-            <div class="sidebar col-md-4">
-                <div class="post-padding clearfix">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li class="active"><a href="freelancer-dashboard.html"><span class="glyphicon glyphicon-off"></span>  My Profile</a></li>
-                        <li><a href="freelancer-edit-resume.html"><span class="glyphicon glyphicon-user"></span>  Edit Resume</a></li>
-                        <li><a href="freelancer-active-jobs.html"><span class="glyphicon glyphicon-briefcase"></span>  Active Jobs</a></li>
-                        <li><a href="freelancer-passed-jobs.html"><span class="glyphicon glyphicon-briefcase"></span>  Passed Jobs</a></li>
-                        <li><a href="freelancer-change-password.html"><span class="glyphicon glyphicon-refresh"></span>  Change Password</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-lock"></span>  Logout</a></li>
-                    </ul>
-                </div><!-- end widget -->
-            </div><!-- end col -->
-
-            <div class="content col-md-8">
+<div class="content col-md-8">
                 <div class="post-padding">
                     <div class="job-title nocover hidden-sm hidden-xs"><h5>My Profile</h5></div>
-                    <form id="submit" class="submit-form">
+                    <form id="submit" class="submit-form" action="${pageContext.request.contextPath}/freelancer/save" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
                                 <label class="control-label">Your Photo <small>Please add a photo.</small></label>
@@ -41,7 +14,7 @@
                                                 <span class="btn btn-default btn-file">
                                                     <span class="fileupload-new">Select Photo</span>
                                                     <span class="fileupload-exists">Change</span>
-                                                    <input type="file">
+                                                    <input type="file" name="file">
                                                 </span>
                                     <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload"><i class="fa fa-close"></i></a>
                                 </div>
@@ -52,17 +25,19 @@
                         <hr>
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
-                                <label class="control-label">Your Name <small>Enter your name</small></label>
-                                <input type="text" name="name" class="form-control" placeholder="Jenny Pelt">
+                                <label class="control-label">Your Name <small>Enter your full name</small></label>
+                                <input type="text" name="name" class="form-control" value="${user.name}">
                                 <br>
                                 <label class="control-label">Title <small>Enter a short title (Ex: Web Designer)</small></label>
-                                <input type="text" name="title" class="form-control" placeholder="Web Designer">
+                                <input type="text" name="title" class="form-control" value="${user.title}">
                                 <br>
-                                <label class="control-label">Email <small>Enter offical email here</small></label>
-                                <input type="email" class="form-control" placeholder="abc@abc.com">
+                                <label class="control-label">Email <small>Enter email here</small></label>
+                                <input type="email" name="email" class="form-control" value="${user.email}">
                                 <br>
                                 <label class="control-label">Address <small>Enter your Address</small></label>
-                                <input type="email" class="form-control" placeholder="Kathmandu">
+                                <input type="text" name="address" class="form-control" value="${user.address}">
+                                <br>
+                               <input type="text" name="id" value="${user.id}">
                                 </div>
                         </div><!-- end row -->
                         <hr>

@@ -29,6 +29,9 @@
     <bean class="com.bishal.collegeProject.dao.UserDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    <bean class="com.bishal.collegeProject.dao.FreelancerDetailDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 
 
 
@@ -37,6 +40,9 @@
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
 
    <!-- <security:http auto-config="true" use-expressions="true">

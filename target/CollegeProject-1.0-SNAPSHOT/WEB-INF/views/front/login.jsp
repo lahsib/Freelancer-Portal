@@ -63,6 +63,23 @@
 
                         <input type="password" name="password" class="form-control" placeholder="Password">
                     </div>
+                    <div class="input-group">
+
+                        <input type="text" name="name" class="form-control" placeholder="Enter full name">
+                    </div>
+                    <div class="input-group">
+
+                        <input type="text" name="title" class="form-control" placeholder="Enter Title">
+                    </div>s
+                    <div class="input-group">
+
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                    </div>
+                    <div class="input-group">
+
+                        <input type="text" name="address" class="form-control" placeholder="Enter Address">
+                    </div>
+
 
                     <button class="btn btn-custom">Register Account</button>
 

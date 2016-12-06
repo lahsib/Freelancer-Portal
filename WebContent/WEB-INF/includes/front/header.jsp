@@ -53,6 +53,7 @@
     <!-- START SITE -->
         <div id="wrapper">
 
+
             <header class="header">
                 <div class="container-fluid">
                     <nav class="navbar navbar-default yamm">
@@ -105,7 +106,7 @@
 
                                                 <li><a href="${pageContext.request.contextPath}/freelancer/dashboard"><span class="glyphicon glyphicon-off"></span> User Dashboard</a></li>
                                                 <li><a href=""><span class="glyphicon glyphicon-refresh"></span> Change Password</a></li>
-                                                <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Logout</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/login/logout"><span class="glyphicon glyphicon-lock"></span> Logout</a></li>
                                             </ul>
 
                                     </c:when>

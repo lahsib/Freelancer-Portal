@@ -1,9 +1,9 @@
 <%@include file="../../includes/front/header.jsp"%>
 <%@include file="../../includes/front/sidebar.jsp"%>
 
-<div class="content col-md-8">
+            <div class="content col-md-8">
                 <div class="post-padding">
-                    <div class="job-title nocover hidden-sm hidden-xs"><h5>My Profile</h5></div>
+                    <div class="job-title nocover hidden-sm hidden-xs"><h5>More Details</h5></div>
                     <form id="submit" class="submit-form" action="${pageContext.request.contextPath}/freelancer/save" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
@@ -37,8 +37,8 @@
                                 <label class="control-label">Address <small>Enter your Address</small></label>
                                 <input type="text" name="address" class="form-control" value="${user.address}">
                                 <br>
-                               <input type="text" name="id" value="${user.id}">
-                                </div>
+                                <input type="text" name="id" value="${user.id}">
+                            </div>
                         </div><!-- end row -->
                         <hr>
                         <button class="btn btn-primary">Update Profile</button>

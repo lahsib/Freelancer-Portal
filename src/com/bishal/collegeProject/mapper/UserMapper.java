@@ -35,7 +35,12 @@ public class UserMapper {
         userModel.setUserName(map.get("username").toString());
         userModel.setPassword(map.get("password").toString());
         userModel.setUserType(map.get("user_type").toString());
-        userModel.setUserTypeName(map.get("name").toString());
+        userModel.setUserTypeName(map.get("userTypeName").toString());
+        userModel.setName(map.get("name").toString());
+        userModel.setTitle(map.get("title").toString());
+        userModel.setEmail(map.get("email").toString());
+        userModel.setAddress(map.get("address").toString());
+
         return userModel;
     }
 

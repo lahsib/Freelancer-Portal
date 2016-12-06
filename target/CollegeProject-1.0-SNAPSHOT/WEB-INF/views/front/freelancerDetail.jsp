@@ -1,21 +1,16 @@
 <%@include file="../../includes/front/header.jsp"%>
-
-<div class="parallax section parallax-off" style="background-image:url('upload/fbg.jpg');">
+<c:if test="${sessionScope.user==null}">
+    <jsp:forward page="../../views/front/login.jsp"/>
+</c:if>
+<div class="parallax section parallax-off" style="background-color:black">
     <div class="container">
         <div class="page-title text-center">
             <img src="upload/testi_07.png" alt="" class="profile-image img-circle img-responsive">
             <div class="heading-holder">
-                <h1>Jenny Pelt</h1>
+                <h1>${user.name}</h1>
             </div>
-            <p class="lead">Freelancer Web Designer & Developer from California</p>
-            <ul class="list-inline social-small">
-                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-            </ul>
+            <p class="lead">${user.title}</p>
+
         </div>
     </div><!-- end container -->
 </div><!-- end section -->

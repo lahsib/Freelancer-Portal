@@ -8,386 +8,405 @@
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="college_project"/>
-      <table id="2" parent="1" name="tbl_freelancer_category"/>
-      <table id="3" parent="1" name="tbl_employer_detail"/>
-      <table id="4" parent="1" name="tbl_freelancer_education"/>
-      <table id="5" parent="1" name="tbl_freelancer_experience"/>
-      <table id="6" parent="1" name="tbl_freelancer_profile"/>
-      <table id="7" parent="1" name="tbl_freelancer_project"/>
-      <table id="8" parent="1" name="tbl_freelancer_skill"/>
-      <table id="9" parent="1" name="tbl_image"/>
-      <table id="10" parent="1" name="tbl_project"/>
-      <table id="11" parent="1" name="tbl_project_bid"/>
-      <table id="12" parent="1" name="tbl_user_type"/>
-      <table id="13" parent="1" name="tbl_user"/>
-      <routine id="14" parent="1" name="proc_usertype">
+      <table id="2" parent="1" name="tbl_employer_detail"/>
+      <table id="3" parent="1" name="tbl_freelancer_education"/>
+      <table id="4" parent="1" name="tbl_freelancer_experience"/>
+      <table id="5" parent="1" name="tbl_freelancer_project"/>
+      <table id="6" parent="1" name="tbl_freelancer_skill"/>
+      <table id="7" parent="1" name="tbl_image"/>
+      <table id="8" parent="1" name="tbl_project"/>
+      <table id="9" parent="1" name="tbl_project_bid"/>
+      <table id="10" parent="1" name="tbl_user_type"/>
+      <table id="11" parent="1" name="tbl_user"/>
+      <table id="12" parent="1" name="tbl_freelancer_detail"/>
+      <routine id="13" parent="1" name="proc_usertype">
         <routine-kind>PROCEDURE</routine-kind>
       </routine>
-      <routine id="15" parent="1" name="proc_user">
-        <routine-kind>PROCEDURE</routine-kind>
-      </routine>
-      <routine id="16" parent="1" name="get_hash">
+      <routine id="14" parent="1" name="get_hash">
         <routine-kind>FUNCTION</routine-kind>
+      </routine>
+      <routine id="15" parent="1" name="proc_freelancedetail">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="16" parent="1" name="proc_user">
+        <routine-kind>PROCEDURE</routine-kind>
       </routine>
       <column id="17" parent="2" name="id">
         <mandatory>1</mandatory>
-        <data-type>int(5)</data-type>
+        <data-type>int(11)</data-type>
       </column>
       <column id="18" parent="2" name="name">
         <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
+        <data-type>varchar(100)</data-type>
       </column>
       <column id="19" parent="2" name="description">
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="20" parent="2" name="status">
-        <mandatory>1</mandatory>
-        <data-type>char(1)</data-type>
-      </column>
-      <column id="21" parent="2" name="created_date">
-        <mandatory>1</mandatory>
-        <data-type>timestamp</data-type>
-        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
-      </column>
-      <key id="22" parent="2" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="23" parent="3" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="24" parent="3" name="name">
+      <column id="20" parent="2" name="location">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="25" parent="3" name="description">
-        <mandatory>1</mandatory>
-        <data-type>text</data-type>
-      </column>
-      <column id="26" parent="3" name="location">
+      <column id="21" parent="2" name="email">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="27" parent="3" name="email">
-        <mandatory>1</mandatory>
-        <data-type>varchar(100)</data-type>
-      </column>
-      <column id="28" parent="3" name="phone">
+      <column id="22" parent="2" name="phone">
         <mandatory>1</mandatory>
         <data-type>varchar(15)</data-type>
       </column>
-      <column id="29" parent="3" name="user_type_id">
+      <column id="23" parent="2" name="user_type_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="30" parent="3" name="PRIMARY">
+      <key id="24" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="31" parent="4" name="id">
+      <column id="25" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="32" parent="4" name="name">
+      <column id="26" parent="3" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="33" parent="4" name="address">
+      <column id="27" parent="3" name="address">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="34" parent="4" name="degree">
+      <column id="28" parent="3" name="degree">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="35" parent="4" name="start_date">
+      <column id="29" parent="3" name="start_date">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="36" parent="4" name="end_date">
+      <column id="30" parent="3" name="end_date">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="37" parent="4" name="profile_id">
+      <column id="31" parent="3" name="profile_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="38" parent="4" name="PRIMARY">
+      <key id="32" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="39" parent="5" name="id">
+      <column id="33" parent="4" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="40" parent="5" name="company_name">
+      <column id="34" parent="4" name="company_name">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="41" parent="5" name="company_location">
+      <column id="35" parent="4" name="company_location">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="42" parent="5" name="job_title">
+      <column id="36" parent="4" name="job_title">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="43" parent="5" name="start_date">
+      <column id="37" parent="4" name="start_date">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="44" parent="5" name="end_date">
+      <column id="38" parent="4" name="end_date">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="45" parent="5" name="description">
+      <column id="39" parent="4" name="description">
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="46" parent="5" name="profile_id">
+      <column id="40" parent="4" name="profile_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="47" parent="5" name="PRIMARY">
+      <key id="41" parent="4" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="48" parent="6" name="id">
+      <column id="42" parent="5" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="49" parent="6" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(100)</data-type>
-      </column>
-      <column id="50" parent="6" name="title">
-        <mandatory>1</mandatory>
-        <data-type>varchar(100)</data-type>
-      </column>
-      <column id="51" parent="6" name="email">
-        <mandatory>1</mandatory>
-        <data-type>varchar(100)</data-type>
-      </column>
-      <column id="52" parent="6" name="address">
-        <mandatory>1</mandatory>
-        <data-type>varchar(100)</data-type>
-      </column>
-      <column id="53" parent="6" name="category_id">
+      <column id="43" parent="5" name="profile_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="54" parent="6" name="user_type_id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <key id="55" parent="6" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="56" parent="7" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="57" parent="7" name="profile_id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="58" parent="7" name="project_name">
+      <column id="44" parent="5" name="project_name">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="59" parent="7" name="project_desc">
+      <column id="45" parent="5" name="project_desc">
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="60" parent="7" name="project_url">
+      <column id="46" parent="5" name="project_url">
         <mandatory>1</mandatory>
         <data-type>varchar(150)</data-type>
       </column>
-      <column id="61" parent="7" name="project_role">
+      <column id="47" parent="5" name="project_role">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="62" parent="7" name="time">
+      <column id="48" parent="5" name="time">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <key id="63" parent="7" name="PRIMARY">
+      <key id="49" parent="5" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="64" parent="8" name="id">
+      <column id="50" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="65" parent="8" name="name">
+      <column id="51" parent="6" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="66" parent="8" name="profile_id">
+      <column id="52" parent="6" name="profile_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="67" parent="8" name="PRIMARY">
+      <key id="53" parent="6" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="68" parent="9" name="id">
+      <column id="54" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="69" parent="9" name="name">
+      <column id="55" parent="7" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="70" parent="9" name="profile_id">
+      <column id="56" parent="7" name="profile_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="71" parent="9" name="PRIMARY">
+      <key id="57" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="72" parent="10" name="id">
+      <column id="58" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="73" parent="10" name="project_name">
+      <column id="59" parent="8" name="project_name">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="74" parent="10" name="project_desc">
+      <column id="60" parent="8" name="project_desc">
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="75" parent="10" name="duration">
+      <column id="61" parent="8" name="duration">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="76" parent="10" name="price">
+      <column id="62" parent="8" name="price">
         <mandatory>1</mandatory>
         <data-type>int(10)</data-type>
       </column>
-      <column id="77" parent="10" name="skills_required">
+      <column id="63" parent="8" name="skills_required">
         <mandatory>1</mandatory>
         <data-type>varchar(200)</data-type>
       </column>
-      <column id="78" parent="10" name="employer_name">
+      <column id="64" parent="8" name="employer_name">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="79" parent="10" name="PRIMARY">
+      <key id="65" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="80" parent="11" name="id">
+      <column id="66" parent="9" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="81" parent="11" name="project_id">
+      <column id="67" parent="9" name="project_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="82" parent="11" name="freelancer_id">
+      <column id="68" parent="9" name="freelancer_id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="83" parent="11" name="description">
+      <column id="69" parent="9" name="description">
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
-      <column id="84" parent="11" name="bid_amount">
+      <column id="70" parent="9" name="bid_amount">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="85" parent="11" name="bid_duration">
+      <column id="71" parent="9" name="bid_duration">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="86" parent="11" name="PRIMARY">
+      <key id="72" parent="9" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="87" parent="12" name="id">
+      <column id="73" parent="10" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="88" parent="12" name="name">
+      <column id="74" parent="10" name="name">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="89" parent="12" name="description">
+      <column id="75" parent="10" name="description">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <key id="90" parent="12" name="PRIMARY">
+      <key id="76" parent="10" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="91" parent="13" name="id">
+      <column id="77" parent="11" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="92" parent="13" name="username">
+      <column id="78" parent="11" name="username">
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="93" parent="13" name="password">
+      <column id="79" parent="11" name="password">
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="94" parent="13" name="user_type">
+      <column id="80" parent="11" name="user_type">
         <data-type>int(11)</data-type>
       </column>
-      <key id="95" parent="13" name="PRIMARY">
+      <column id="81" parent="11" name="name">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="82" parent="11" name="title">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="83" parent="11" name="email">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="84" parent="11" name="address">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="85" parent="11" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <argument id="96" parent="14" name="in_flag">
+      <column id="86" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="87" parent="12" name="description">
+        <data-type>text</data-type>
+      </column>
+      <column id="88" parent="12" name="price">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="89" parent="12" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="12" name="image">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <key id="91" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <argument id="92" parent="13" name="in_flag">
         <direction>IN</direction>
         <data-type>char(1)</data-type>
       </argument>
-      <argument id="97" parent="14" name="in_usertype_id">
+      <argument id="93" parent="13" name="in_usertype_id">
         <direction>IN</direction>
         <data-type>int(10)</data-type>
       </argument>
-      <argument id="98" parent="14" name="in_name">
+      <argument id="94" parent="13" name="in_name">
         <direction>IN</direction>
         <data-type>varchar(100)</data-type>
       </argument>
-      <argument id="99" parent="14" name="in_description">
+      <argument id="95" parent="13" name="in_description">
         <direction>IN</direction>
         <data-type>varchar(100)</data-type>
       </argument>
-      <argument id="100" parent="15" name="in_flag">
-        <direction>IN</direction>
-        <data-type>char(1)</data-type>
-      </argument>
-      <argument id="101" parent="15" name="in_user_id">
-        <direction>IN</direction>
-        <data-type>int(10)</data-type>
-      </argument>
-      <argument id="102" parent="15" name="in_usertype">
-        <direction>IN</direction>
-        <data-type>int(10)</data-type>
-      </argument>
-      <argument id="103" parent="15" name="in_user_name">
-        <direction>IN</direction>
-        <data-type>varchar(100)</data-type>
-      </argument>
-      <argument id="104" parent="15" name="in_password">
-        <direction>IN</direction>
-        <data-type>varchar(50)</data-type>
-      </argument>
-      <argument id="105" parent="16">
+      <argument id="96" parent="14">
         <direction>RETURN</direction>
         <data-type>varchar(50)</data-type>
       </argument>
-      <argument id="106" parent="16" name="p_user_id">
+      <argument id="97" parent="14" name="p_user_id">
         <direction>IN</direction>
         <data-type>int(11)</data-type>
       </argument>
-      <argument id="107" parent="16" name="p_password">
+      <argument id="98" parent="14" name="p_password">
+        <direction>IN</direction>
+        <data-type>varchar(50)</data-type>
+      </argument>
+      <argument id="99" parent="15" name="in_flag">
+        <direction>IN</direction>
+        <data-type>char(1)</data-type>
+      </argument>
+      <argument id="100" parent="15" name="in_profile_id">
+        <direction>IN</direction>
+        <data-type>int(10)</data-type>
+      </argument>
+      <argument id="101" parent="15" name="in_description">
+        <direction>IN</direction>
+        <data-type>text</data-type>
+      </argument>
+      <argument id="102" parent="15" name="in_price">
+        <direction>IN</direction>
+        <data-type>varchar(100)</data-type>
+      </argument>
+      <argument id="103" parent="15" name="in_image">
+        <direction>IN</direction>
+        <data-type>varchar(100)</data-type>
+      </argument>
+      <argument id="104" parent="15" name="in_user_id">
+        <direction>IN</direction>
+        <data-type>int(10)</data-type>
+      </argument>
+      <argument id="105" parent="16" name="in_flag">
+        <direction>IN</direction>
+        <data-type>char(1)</data-type>
+      </argument>
+      <argument id="106" parent="16" name="in_user_id">
+        <direction>IN</direction>
+        <data-type>int(10)</data-type>
+      </argument>
+      <argument id="107" parent="16" name="in_usertype">
+        <direction>IN</direction>
+        <data-type>int(10)</data-type>
+      </argument>
+      <argument id="108" parent="16" name="in_user_name">
+        <direction>IN</direction>
+        <data-type>varchar(100)</data-type>
+      </argument>
+      <argument id="109" parent="16" name="in_name">
+        <direction>IN</direction>
+        <data-type>varchar(100)</data-type>
+      </argument>
+      <argument id="110" parent="16" name="in_title">
+        <direction>IN</direction>
+        <data-type>varchar(100)</data-type>
+      </argument>
+      <argument id="111" parent="16" name="in_email">
+        <direction>IN</direction>
+        <data-type>varchar(100)</data-type>
+      </argument>
+      <argument id="112" parent="16" name="in_address">
+        <direction>IN</direction>
+        <data-type>varchar(100)</data-type>
+      </argument>
+      <argument id="113" parent="16" name="in_password">
         <direction>IN</direction>
         <data-type>varchar(50)</data-type>
       </argument>

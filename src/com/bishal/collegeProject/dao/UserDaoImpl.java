@@ -29,6 +29,13 @@ public class UserDaoImpl extends JdbcTemplate implements UserDao {
         call.addDeclaredParameter(new SqlParameter("in_password",Types.VARCHAR));
         call.addDeclaredParameter(new SqlParameter("in_usertype", Types.NUMERIC));
 
+        call.addDeclaredParameter(new SqlParameter("in_name",Types.VARCHAR));
+        call.addDeclaredParameter(new SqlParameter("in_title",Types.VARCHAR));
+        call.addDeclaredParameter(new SqlParameter("in_email",Types.VARCHAR));
+        call.addDeclaredParameter(new SqlParameter("in_address",Types.VARCHAR));
+
+
+
 
         Map<String, Object> inp = new HashMap<String, Object>();
 
@@ -38,6 +45,12 @@ public class UserDaoImpl extends JdbcTemplate implements UserDao {
         inp.put("in_user_name",userModel.getUserName());
         inp.put("in_password",userModel.getPassword());
         inp.put("in_usertype",userModel.getUserType());
+        inp.put("in_name",userModel.getName());
+        inp.put("in_title",userModel.getTitle());
+        inp.put("in_email",userModel.getEmail());
+        inp.put("in_address",userModel.getAddress());
+
+
 
         Map<String,Object> resultMap = call.execute(inp);
 

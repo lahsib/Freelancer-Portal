@@ -5,7 +5,7 @@ package com.bishal.collegeProject.model;
  */
 public class UserModel {
 
-    private String id, userName,password,userType,userTypeName;
+    private String id, userName,password,userType,userTypeName,name,email,address,title,image;
 
     public String getId() {
         return id;
@@ -47,6 +47,46 @@ public class UserModel {
         this.userTypeName = userTypeName;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
         return "UserModel{" +
@@ -55,6 +95,11 @@ public class UserModel {
                 ", password='" + password + '\'' +
                 ", userType='" + userType + '\'' +
                 ", userTypeName='" + userTypeName + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", title='" + title + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
 }

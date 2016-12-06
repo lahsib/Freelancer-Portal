@@ -41,8 +41,11 @@ public class LoginController {
             System.out.println(userModel1.getUserTypeName());
             HttpSession session=request.getSession();
             session.setAttribute("user",userModel1.getUserName());
+            session.setAttribute("userId",userModel1.getId());
+            session.setAttribute("userTypeId",userModel1.getUserType());
 
             if (userModel1.getUserTypeName().equals(user1)){
+                rd.addFlashAttribute("user",userModel1);
                 return "redirect:../freelancer/detail";
             }
             else if(userModel1.getUserTypeName().equals(user2)){
@@ -70,6 +73,6 @@ public class LoginController {
     public String logout(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         session.invalidate();
-        return "front/index";
+        return "redirect:../user/view";
     }
 }
