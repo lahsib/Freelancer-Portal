@@ -1,60 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5b3d626-5e28-4479-bd80-62a88600116d" name="Default" comment="second commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/includes/front/sidebar.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/front/addDetail.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/dao/FreelancerDetailDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/dao/FreelancerDetailDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/mapper/FreelancerDetailMapper.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/dao/FreelancerProfileDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/dao/FreelancerProfileDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/mapper/FreelancerProfileMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/dao/FreelancerProfileDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/dao/FreelancerProfileDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/mapper/FreelancerProfileMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/model/FreelancerProfileModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/dao/FreelancerProfileDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/dao/FreelancerProfileDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/mapper/FreelancerProfileMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/model/FreelancerProfileModel.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/model/FreelancerProfileModel.java" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/model/FreelancerDetailModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/controller/FreelancerController.class" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/controller/FreelancerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/dao/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/dao/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/mapper/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/model/UserModel.class" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/classes/com/bishal/collegeProject/model/UserModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/controller/FreelancerController.class" afterPath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/controller/FreelancerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/dao/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/dao/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/mapper/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/model/UserModel.class" afterPath="$PROJECT_DIR$/target/classes/com/bishal/collegeProject/model/UserModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/CollegeProject_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CollegeProject_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="a5b3d626-5e28-4479-bd80-62a88600116d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollegeProject.iml" afterPath="$PROJECT_DIR$/CollegeProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/includes/front/header.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/includes/front/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/spring.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/front/freelancerDashboard.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/front/freelancerDashboard.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/front/freelancerDetail.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/front/freelancerDetail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/front/login.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/views/front/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/controller/FreelancerController.java" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/controller/FreelancerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/dao/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/dao/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/mapper/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/bishal/collegeProject/model/UserModel.java" afterPath="$PROJECT_DIR$/src/com/bishal/collegeProject/model/UserModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/includes/front/header.jsp" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/includes/front/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/spring.xml" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/spring.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/views/front/freelancerDashboard.jsp" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/views/front/freelancerDashboard.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/views/front/freelancerDetail.jsp" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/views/front/freelancerDetail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/views/front/login.jsp" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/views/front/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/CollegeProject-1.0-SNAPSHOT/WEB-INF/web.xml" />
     </list>
     <ignored path="CollegeProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -182,7 +130,7 @@
       <file leaf-file-name="addDetail.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/front/addDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0089285">
+            <state vertical-scroll-proportion="1.6956521">
               <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
               <folding />
             </state>
@@ -1144,12 +1092,19 @@
       <workItem from="1479698716639" duration="25616000" />
       <workItem from="1480843157613" duration="505000" />
       <workItem from="1480844364877" duration="1090000" />
-      <workItem from="1480921089396" duration="9986000" />
+      <workItem from="1480921089396" duration="10125000" />
     </task>
+    <task id="LOCAL-00001" summary="second commit">
+      <created>1481039518143</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1481039518143</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73564000" />
+    <option name="totallyTimeSpent" value="73703000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1161,7 +1116,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="707" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="707" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1177,17 +1132,17 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3691057" sideWeight="0.6017771" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3691057" sideWeight="0.6017771" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20975609" sideWeight="0.6704362" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35447153" sideWeight="0.6704362" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828755" sideWeight="0.8685567" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828755" sideWeight="0.86901766" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828755" sideWeight="0.13144329" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828755" sideWeight="0.13098237" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23909532" sideWeight="0.5090909" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1716,7 +1671,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/front/addDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0089285">
+        <state vertical-scroll-proportion="1.6956521">
           <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
           <folding />
         </state>
