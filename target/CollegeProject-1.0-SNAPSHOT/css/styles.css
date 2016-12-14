@@ -35,9 +35,7 @@
     IMPORT FILES
 ******************************************/
 
-@import url(css/owl.carousel.css);
-@import url(css/font-awesome.css);
-@import url(css/open-iconic.min.css);
+
 
 /******************************************
     IMPORT FONTS
@@ -1004,7 +1002,7 @@ h5.color3 {
 }
 
 .profile-image {
-    max-width: 100px;
+    max-width: 200px !important;
     margin: 0 auto 15px;
 }
 

@@ -23,8 +23,8 @@
     <script src="${pageContext.request.contextPath}/js/custom.js"></script>
     <script src="${pageContext.request.contextPath}/js/map-job.js"></script>
     <script src="${pageContext.request.contextPath}/js/map-upload.js"></script>
-            <script src="${pageContext.request.contextPath}/js/all.js"></script>
-            <script src="${pageContext.request.contextPath}/js/customs.js"></script>
+     <script src="${pageContext.request.contextPath}/js/all.js"></script>
+     <script src="${pageContext.request.contextPath}/js/customs.js"></script>
 
     <!-- ******************************************
     ADD YOUR CUSTOM JAVASCRIPT FILES HERE

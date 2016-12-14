@@ -40,6 +40,7 @@ public class LoginController {
             userModel1 = new UserMapper().mapRow((Map)userDao.procUser(userModel1,"s").get(0));
             System.out.println(userModel1.getUserTypeName());
             HttpSession session=request.getSession();
+
             session.setAttribute("user",userModel1.getUserName());
             session.setAttribute("userId",userModel1.getId());
             session.setAttribute("userTypeId",userModel1.getUserType());

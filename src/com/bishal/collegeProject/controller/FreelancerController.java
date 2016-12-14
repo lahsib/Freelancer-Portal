@@ -2,6 +2,7 @@ package com.bishal.collegeProject.controller;
 
 import com.bishal.collegeProject.dao.FreelancerDetailDao;
 import com.bishal.collegeProject.dao.UserDao;
+import com.bishal.collegeProject.mapper.FreelancerDetailMapper;
 import com.bishal.collegeProject.mapper.UserMapper;
 import com.bishal.collegeProject.model.FreelancerDetailModel;
 import com.bishal.collegeProject.model.UserModel;
@@ -37,7 +38,19 @@ public class FreelancerController {
 
 
     @RequestMapping(value = "/detail" , method = RequestMethod.GET)
-    public String detail(){
+    public String detail(HttpSession session, UserModel userModel,Model model,FreelancerDetailModel freelancerDetailModel){
+        String id=(String)session.getAttribute("userId");
+        System.out.println(id);
+        userModel.setId(id);
+        freelancerDetailModel.setUserId(id);
+        userModel = new UserMapper().mapRow((Map)userDao.procUser(userModel,"s").get(0));
+        freelancerDetailModel = new FreelancerDetailMapper().mapRow((Map)freelancerDetailDao.procFreelanceDetail(freelancerDetailModel,"s").get(0));
+        model.addAttribute("user",userModel);
+
+        model.addAttribute("detail",freelancerDetailModel);
+        System.out.println("###########");
+        System.out.println(freelancerDetailModel);
+        System.out.println("$$$$$$$$$$$$$$$");
         return "front/freelancerDetail";
     }
 
@@ -45,8 +58,11 @@ public class FreelancerController {
     public String dashboard(HttpSession session, UserModel userModel,Model model){
         String id=(String)session.getAttribute("userId");
         userModel.setId(id);
+
         userModel = new UserMapper().mapRow((Map)userDao.procUser(userModel,"s").get(0));
         model.addAttribute("user",userModel);
+
+
         return "front/freelancerDashboard";
     }
     @RequestMapping(value = "/addDetail" , method = RequestMethod.GET)

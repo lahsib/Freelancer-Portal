@@ -2,14 +2,54 @@
 <c:if test="${sessionScope.user==null}">
     <jsp:forward page="../../views/front/login.jsp"/>
 </c:if>
+<div class="modal fade in" id="educationModal" tabindex="-1" role="dialog" style="display: block; padding-left: 0px;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="btn btn-danger" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+            <div class="modal-body">
+                <div class="widget clearfix">
+                    <div class="post-padding item-price">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="content-title">
+                                    <h4><i class="fa fa-lock"></i> Login Account</h4>
+                                </div><!-- end widget-title -->
+
+                                <form id="submit" class="submit-form">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <input type="text" class="form-control" placeholder="Username or Email">
+                                            <input type="password" class="form-control" placeholder="*******">
+                                            <button class="btn btn-primary">Login</button>
+                                        </div>
+                                    </div><!-- end row -->
+                                </form>
+                            </div><!-- end col -->
+
+                            <div class="col-md-6">
+                                <div class="content-title">
+                                    <h4>No have account?</h4>
+                                </div><!-- end widget-title -->
+
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                                <a href="#" class="btn btn-custom">Register Account</a>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                    </div><!-- end newsletter -->
+                </div><!-- end post-padding -->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
 <div class="parallax section parallax-off" style="background-color:black">
     <div class="container">
         <div class="page-title text-center">
-            <img src="upload/testi_07.png" alt="" class="profile-image img-circle img-responsive">
+            <img src="http://localhost:8080/img/bxal.jpg" alt="" class="profile-image img-circle img-responsive">
             <div class="heading-holder">
                 <h1>${user.name}</h1>
             </div>
             <p class="lead">${user.title}</p>
+            <p class="lead">${user.address}</p>
 
         </div>
     </div><!-- end container -->
@@ -21,36 +61,22 @@
             <div class="content col-md-8">
                 <div class="post-padding">
                     <div class="single-content">
-                        <h4 class="small-title">Why Choose Us?</h4>
-                        <p class="lead">100% Result Till now  with 5/5 rating with Preferred Freelancer chosen by Freelancer itself..</p>
-
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                        <p>Rremaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                        <h5 class="small-title">Preferred Freelancer and 100% Success Rate</h5>
-
-                        <ul class="customlist">
-                            <li>WordPress Expert</li>
-                            <li>Opencart listed Partner </li>
-                            <li>Magento Certified</li>
-                            <li>Php Larvel ,Zend Framework</li>
-                            <li>Certified Social Engine</li>
-                            <li>Prestashop , CS cart and Drupal,  ZenCart developer</li>
-                            <li>PSD TO HTML5 (  Elite author in themeforest)</li>
-                            <li>Great experience with Linux, Server Optimizing, Failover Clustering, Security, Virtualization know common used utilites, scripts and services such as Apache, PHP, MySQL, Nginx and many others.</li>
-                            <li>Donec venenatis ante a imperdiet maximus. Sed in justo porta, rutrum velit non, blandit lorem.</li>
-                            <li>Aenean pretium tortor eget nisl accumsan posuere. Aliquam congue metus eget quam scelerisque rhoncus.</li>
-                            <li>Donec vestibulum lectus a nisi vestibulum, sed vehicula est finibus. Proin facilisis tortor sed leo suscipit, quis pellentesque dui luctus.</li>
-                        </ul>
+                        <h4 class="small-title">Why Choose Me?</h4>
+                        ${detail.description}
                     </div>
 
                 </div><!-- end post-padding -->
 
                 <div class="post-padding">
                     <div class="single-content recentworks">
-                        <h4 class="small-title">Our Location <a href="#" class="readmore">View Large</a></h4>
-                        <div id="map"></div>
+                        <h4 class="small-title">Education<a href="#" class="readmore" id="addStudent">Add New</a></h4>
+                        <div id="row">
+                            <table class="table-bordered">
+                                <th>Institude Name</th>
+                                <th>Degree</th>
+
+                            </table>
+                        </div>
                     </div><!-- end single-content -->
                 </div>
 
@@ -161,51 +187,15 @@
             <div class="sidebar col-md-4">
                 <div class="widget clearfix">
                     <div class="customwidget item-price w40">
-                        <span class="text-center">$30/hr</span>
-                        <div class="rating text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <small>95% Recommended</small>
-                        </div>
+                        <span class="text-center">$${detail.price} / hr</span>
+
                         <hr>
-                        <div class="text-center">
-                            <small><a href="#"><i class="fa fa-star-o"></i> Add to Favorites</a> &nbsp;&nbsp; <a href="#"><i class="fa fa-heart-o"></i> Like it</a> </small>
-                        </div>
-                        <hr>
-                        <div class="link-widget">
-                            <ul class="check">
-                                <li>21 Jobs Done</li>
-                                <li>Member Since 2014</li>
-                                <li>12 Recommended</li>
-                            </ul><!-- end check -->
-                        </div>
-                        <div class="text-center">
+                        <%--<div class="text-center">
                             <a href="#contactmodal" role="button" data-toggle="modal" class="btn btn-primary btn-lg">Contact Me</a>
                             <a href="#" class="btn btn-primary btn-lg">Download CV</a>
-                        </div>
+                        </div>--%>
                     </div><!-- end newsletter -->
                 </div><!-- end widget -->
-
-                <div class="widget post-padding clearfix">
-                    <div class="widget-title">
-                        <h4>Verifications</h4>
-                    </div><!-- end widget-title -->
-
-                    <div class="link-widget">
-                        <ul class="verification-list">
-                            <li class="done"><i class="fa fa-facebook"></i> Facebook Linked</li>
-                            <li class="done"><i class="fa fa-twitter"></i> Twitter Linked</li>
-                            <li><i class="fa fa-shield"></i> Preferred Freelancer</li>
-                            <li class="done"><i class="fa fa-money"></i> Payment Approved</li>
-                            <li><i class="fa fa-phone"></i> Verified Phone</li>
-                            <li class="done"><i class="fa fa-user"></i> Authenticated</li>
-                            <li class="done"><i class="fa fa-envelope-o"></i> Email Verified</li>
-                        </ul><!-- end check -->
-                    </div><!-- end link-widget -->
-                </div><!-- end post-padding -->
 
                 <div class="widget post-padding clearfix">
                     <div class="widget-title">
@@ -256,5 +246,6 @@
         </div><!-- end row -->
     </div>
     </div><!-- end container -->
+<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
 
 <%@include file="../../includes/front/footer.jsp"%>

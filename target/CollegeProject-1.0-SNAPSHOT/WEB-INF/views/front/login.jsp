@@ -47,9 +47,9 @@
                         <span style="color:green">${msg.msg}</span>
                     </c:if>
                     <div class="input-group">
-                        <label>I am :</label>
-                        <select class="form-control" name="userType">
 
+                        <select class="form-control" id="type" name="userType" required>
+                            <option disabled selected value> ---     I am   --- </option>
                             <c:forEach items="${userType}" var="userType">
                                 <option value="${userType.userTypeId}">${userType.name}</option>
                             </c:forEach>
@@ -65,12 +65,12 @@
                     </div>
                     <div class="input-group">
 
-                        <input type="text" name="name" class="form-control" placeholder="Enter full name">
+                        <input id="name" type="text" name="name" class="form-control" placeholder="">
                     </div>
                     <div class="input-group">
 
-                        <input type="text" name="title" class="form-control" placeholder="Enter Title">
-                    </div>s
+                        <input id="title" type="text" name="title" class="form-control" placeholder="">
+                    </div>
                     <div class="input-group">
 
                         <input type="email" name="email" class="form-control" placeholder="Enter Email">
@@ -89,5 +89,22 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </div><!-- end section -->
+<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+<script>
+    $('#type').change(
+    function () {
+    var type = $('option:selected').val();
+
+    if (this.value == "11") {
+        $('#name').attr('placeholder','Enter Full Name');
+        $('#title').attr('placeholder','Enter Title [eg. Java developer]');
+    } else if (this.value == "12") {
+        $('#name').attr('placeholder','Company Name');
+        $('#title').attr('placeholder','Company type [eg. Web Agency]');
+
+    }
+    });
+</script>
+
 
 <%@include file="../../includes/front/footer.jsp"%>

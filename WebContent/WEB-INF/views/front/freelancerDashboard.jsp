@@ -1,26 +1,13 @@
 <%@include file="../../includes/front/header.jsp"%>
 <%@include file="../../includes/front/sidebar.jsp"%>
+<c:if test="${sessionScope.user==null}">
+    <jsp:forward page="../../views/front/login.jsp"/>
+</c:if>
 
 <div class="content col-md-8">
                 <div class="post-padding">
                     <div class="job-title nocover hidden-sm hidden-xs"><h5>My Profile</h5></div>
                     <form id="submit" class="submit-form" action="${pageContext.request.contextPath}/freelancer/save" method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <label class="control-label">Your Photo <small>Please add a photo.</small></label>
-                                <div class="fileupload fileupload-new" data-provides="fileupload">
-                                    <div class="fileupload-preview thumbnail"></div>
-                                    <br>
-                                                <span class="btn btn-default btn-file">
-                                                    <span class="fileupload-new">Select Photo</span>
-                                                    <span class="fileupload-exists">Change</span>
-                                                    <input type="file" name="file">
-                                                </span>
-                                    <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload"><i class="fa fa-close"></i></a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-
 
                         <hr>
                         <div class="row">
