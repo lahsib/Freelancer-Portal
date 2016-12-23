@@ -15,6 +15,7 @@
             <div class="sidebar col-md-4">
                 <div class="post-padding clearfix">
                     <ul class="nav nav-pills nav-stacked">
+                        <li><a href="${pageContext.request.contextPath}/freelancer/detail"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                         <li><a href="${pageContext.request.contextPath}/freelancer/dashboard"><span class="glyphicon glyphicon-off"></span>  My Profile</a></li>
                         <li><a href="${pageContext.request.contextPath}/freelancer/addDetail"><span class="glyphicon glyphicon-user"></span>  More details</a></li>
                         <li><a href="freelancer-active-jobs.html"><span class="glyphicon glyphicon-briefcase"></span>  Active Jobs</a></li>

@@ -4,7 +4,7 @@ package com.bishal.collegeProject.model;
  * Created by user on 10/21/16.
  */
 public class FreelancerSkillModel {
-    private String id,name,proflieId;
+    private String id,name,profileId;
 
     public String getName() {
         return name;
@@ -22,12 +22,12 @@ public class FreelancerSkillModel {
         this.id = id;
     }
 
-    public String getProflieId() {
-        return proflieId;
+    public String getprofileId() {
+        return profileId;
     }
 
-    public void setProflieId(String proflieId) {
-        this.proflieId = proflieId;
+    public void setprofileId(String profileId) {
+        this.profileId = profileId;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class FreelancerSkillModel {
         return "FreelancerSkillModel{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", proflieId='" + proflieId + '\'' +
+                ", profileId='" + profileId + '\'' +
                 '}';
     }
 }

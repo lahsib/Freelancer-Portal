@@ -4,7 +4,7 @@ package com.bishal.collegeProject.model;
  * Created by user on 10/21/16.
  */
 public class FreelancerExperienceModel {
-    private String id,companyName,companyLocation,jobTittle,startDate,enddate,description,profileId;
+    private String id,companyName,companyLocation,jobTittle,startDate,endDate,description,profileId;
 
     public String getId() {
         return id;
@@ -46,12 +46,12 @@ public class FreelancerExperienceModel {
         this.startDate = startDate;
     }
 
-    public String getEnddate() {
-        return enddate;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public void setEnddate(String enddate) {
-        this.enddate = enddate;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
     public String getDescription() {
@@ -78,9 +78,11 @@ public class FreelancerExperienceModel {
                 ", companyLocation='" + companyLocation + '\'' +
                 ", jobTittle='" + jobTittle + '\'' +
                 ", startDate='" + startDate + '\'' +
-                ", enddate='" + enddate + '\'' +
+                ", endDate='" + endDate + '\'' +
                 ", description='" + description + '\'' +
                 ", profileId='" + profileId + '\'' +
                 '}';
     }
+
+
 }

@@ -5,7 +5,7 @@ package com.bishal.collegeProject.model;
  */
 public class FreelancerEducationModel {
 
-    private String id,name,address,degree,startDate,endDate,profileId;
+    private String id,name,degree,startDate,endDate,profileId;
 
     public String getId() {
         return id;
@@ -23,13 +23,7 @@ public class FreelancerEducationModel {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public String getDegree() {
         return degree;
@@ -68,7 +62,7 @@ public class FreelancerEducationModel {
         return "FreelancerEducationModel{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
+
                 ", degree='" + degree + '\'' +
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +

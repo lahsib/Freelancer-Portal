@@ -24,7 +24,7 @@ public class FreelancerDetailDaoImpl extends JdbcTemplate implements FreelancerD
 
         call.addDeclaredParameter(new SqlParameter("in_profile_id", Types.NUMERIC));
         call.addDeclaredParameter(new SqlParameter("in_flag", Types.CHAR));
-        call.addDeclaredParameter(new SqlParameter("in_description", Types.VARCHAR));
+        call.addDeclaredParameter(new SqlParameter("in_description", Types.CLOB));
         call.addDeclaredParameter(new SqlParameter("in_price",Types.VARCHAR));
         call.addDeclaredParameter(new SqlParameter("in_image",Types.VARCHAR));
         call.addDeclaredParameter(new SqlParameter("in_user_id", Types.NUMERIC));

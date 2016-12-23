@@ -1,5 +1,6 @@
 <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="${pageContext.request.contextPath}/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <!-- Sweet Alert -->
 <link href="${pageContext.request.contextPath}/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
@@ -17,6 +18,8 @@
 <link href="${pageContext.request.contextPath}/css/ticket.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/css/animate.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/styles.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/custom.css.css" rel="stylesheet">
 
 
 

@@ -32,7 +32,15 @@
     <bean class="com.bishal.collegeProject.dao.FreelancerDetailDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
+    <bean class="com.bishal.collegeProject.dao.FreelancerEducationDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean class="com.bishal.collegeProject.dao.FreelancerExperienceDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean class="com.bishal.collegeProject.dao.FreelancerSkillDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 
 
     <tx:annotation-driven transaction-manager="txManager"/>
