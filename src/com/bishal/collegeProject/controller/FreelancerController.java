@@ -28,7 +28,7 @@ import java.util.Map;
 @RequestMapping(value = "/freelancer")
 public class FreelancerController {
     @Autowired
-    FreelancerDetailDao freelancerDetailDao;
+    UserDetailDao userDetailDao;
 
     @Autowired
     UserDao userDao;
@@ -42,14 +42,18 @@ public class FreelancerController {
     @Autowired
     FreelancerSkillDao freelancerSkillDao;
 
+    @Autowired
+    FreelancerProjectDao freelancerProjectDao;
+
     static final String ImageUrl = System.getProperty("catalina.home") + "/webapps/freelancer-img/";
 
 
     @RequestMapping(value = "/detail" , method = RequestMethod.GET)
-    public String detail(HttpSession session, UserModel userModel, Model model, FreelancerDetailModel freelancerDetailModel
+    public String detail(HttpSession session, UserModel userModel, Model model, UserDetailModel userDetailModel
             , FreelancerEducationModel freelancerEducationModel
             , FreelancerExperienceModel freelancerExperienceModel
-            , FreelancerSkillModel freelancerSkillModel){
+            , FreelancerSkillModel freelancerSkillModel
+            , FreelancerProjectModel freelancerProjectModel){
 
 
         String id=(String)session.getAttribute("userId");
@@ -57,15 +61,15 @@ public class FreelancerController {
 
 
         userModel.setId(id);
-        freelancerDetailModel.setUserId(id);
+        userDetailModel.setUserId(id);
         freelancerEducationModel.setProfileId(id);
         freelancerExperienceModel.setProfileId(id);
         freelancerSkillModel.setprofileId(id);
-
+        freelancerProjectModel.setProfileId(id);
 
         userModel = new UserMapper().mapRow((Map)userDao.procUser(userModel,"s").get(0));
 
-        freelancerDetailModel = new FreelancerDetailMapper().mapRow((Map)freelancerDetailDao.procFreelanceDetail(freelancerDetailModel,"s").get(0));
+        userDetailModel = new FreelancerDetailMapper().mapRow((Map) userDetailDao.procFreelanceDetail(userDetailModel,"s").get(0));
 
         List<FreelancerEducationModel> freelancerEducationModelList = new FreelancerEducationMapper().mapList(freelancerEducationDao.procFreelancerEducation(freelancerEducationModel,"s"));
 
@@ -73,15 +77,21 @@ public class FreelancerController {
 
         List<FreelancerSkillModel> freelancerSkillModelList = new FreelancerSkillMapper().mapList(freelancerSkillDao.procSkill(freelancerSkillModel,"s"));
 
+        List<FreelancerProjectModel> freelancerProjectModelList = new FreelancerProjectMapper().mapList(freelancerProjectDao.procFreelancerProject(freelancerProjectModel,"s"));
+
+
+
         model.addAttribute("user",userModel);
 
-        model.addAttribute("detail",freelancerDetailModel);
+        model.addAttribute("detail", userDetailModel);
 
         model.addAttribute("education",freelancerEducationModelList);
 
         model.addAttribute("experience",freelancerExperienceModelList);
 
         model.addAttribute("skill",freelancerSkillModelList);
+
+        model.addAttribute("fproject",freelancerProjectModelList);
 
 
         return "front/freelancerDetail";
@@ -106,19 +116,19 @@ public class FreelancerController {
         return "redirect:/freelancer/dashboard";
     }
     @RequestMapping(value = "/addDetail" , method = RequestMethod.GET)
-    public String addDetail(HttpSession session,FreelancerDetailModel freelancerDetailModel,Model model){
+    public String addDetail(HttpSession session, UserDetailModel userDetailModel, Model model){
         String id=(String)session.getAttribute("userId");
-        freelancerDetailModel.setUserId(id);
+        userDetailModel.setUserId(id);
 
-        freelancerDetailModel = new FreelancerDetailMapper().mapRow((Map)freelancerDetailDao.procFreelanceDetail(freelancerDetailModel,"a").get(0));
-        System.out.println(freelancerDetailModel);
+        userDetailModel = new FreelancerDetailMapper().mapRow((Map) userDetailDao.procFreelanceDetail(userDetailModel,"a").get(0));
+        System.out.println(userDetailModel);
 
-        model.addAttribute("detail",freelancerDetailModel);
+        model.addAttribute("detail", userDetailModel);
         return "front/addDetail";
     }
 
     @RequestMapping(value = "/save",method = RequestMethod.POST)
-    public String save(@RequestParam(value = "file", required = false) MultipartFile file, Model model, FreelancerDetailModel freelancerDetailModel, HttpSession session, RedirectAttributes rd) throws IOException {
+    public String save(@RequestParam(value = "file", required = false) MultipartFile file, Model model, UserDetailModel userDetailModel, HttpSession session, RedirectAttributes rd) throws IOException {
 
         String a= (String) session.getAttribute("user");
 
@@ -128,9 +138,9 @@ public class FreelancerController {
             ImageIO.write(src, "jpg", destination);
             //Save the id you have used to create the file name in the DB. You can retrieve the image in future with the ID.
         }
-        freelancerDetailModel.setImage(a);
+        userDetailModel.setImage(a);
 
-        Map map = (Map) freelancerDetailDao.procFreelanceDetail(freelancerDetailModel,"u").get(0);
+        Map map = (Map) userDetailDao.procFreelanceDetail(userDetailModel,"u").get(0);
         rd.addFlashAttribute("msg",map.get("msg"));
         System.out.println(map);
         return "redirect:/freelancer/addDetail";

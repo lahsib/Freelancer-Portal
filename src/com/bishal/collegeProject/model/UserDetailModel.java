@@ -3,7 +3,7 @@ package com.bishal.collegeProject.model;
 /**
  * Created by user on 10/21/16.
  */
-public class FreelancerDetailModel {
+public class UserDetailModel {
     private String detailId,description,price,userId,image;
 
     public String getDetailId() {
@@ -48,7 +48,7 @@ public class FreelancerDetailModel {
 
     @Override
     public String toString() {
-        return "FreelancerDetailModel{" +
+        return "UserDetailModel{" +
                 "detailId='" + detailId + '\'' +
                 ", description='" + description + '\'' +
                 ", price='" + price + '\'' +

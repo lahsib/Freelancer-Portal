@@ -29,7 +29,7 @@
     <bean class="com.bishal.collegeProject.dao.UserDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <bean class="com.bishal.collegeProject.dao.FreelancerDetailDaoImpl">
+    <bean class="com.bishal.collegeProject.dao.UserDetailDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
     <bean class="com.bishal.collegeProject.dao.FreelancerEducationDaoImpl">
@@ -39,6 +39,9 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
     <bean class="com.bishal.collegeProject.dao.FreelancerSkillDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean class="com.bishal.collegeProject.dao.FreelancerProjectDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 

@@ -4,7 +4,7 @@ package com.bishal.collegeProject.model;
  * Created by user on 10/21/16.
  */
 public class FreelancerProjectModel {
-    private String id,profileId,projectName,projectDesc,projectUrl,projectRole,time;
+    private String id,profileId,projectName,projectDesc,projectUrl,time;
 
     public String getId() {
         return id;
@@ -46,14 +46,6 @@ public class FreelancerProjectModel {
         this.projectUrl = projectUrl;
     }
 
-    public String getProjectRole() {
-        return projectRole;
-    }
-
-    public void setProjectRole(String projectRole) {
-        this.projectRole = projectRole;
-    }
-
     public String getTime() {
         return time;
     }
@@ -70,7 +62,6 @@ public class FreelancerProjectModel {
                 ", projectName='" + projectName + '\'' +
                 ", projectDesc='" + projectDesc + '\'' +
                 ", projectUrl='" + projectUrl + '\'' +
-                ", projectRole='" + projectRole + '\'' +
                 ", time='" + time + '\'' +
                 '}';
     }

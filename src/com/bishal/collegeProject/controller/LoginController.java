@@ -44,13 +44,15 @@ public class LoginController {
             session.setAttribute("user",userModel1.getUserName());
             session.setAttribute("userId",userModel1.getId());
             session.setAttribute("userTypeId",userModel1.getUserType());
+            session.setAttribute("userTypeName",userModel1.getUserTypeName());
 
             if (userModel1.getUserTypeName().equals(user1)){
                 rd.addFlashAttribute("user",userModel1);
                 return "redirect:../freelancer/detail";
             }
             else if(userModel1.getUserTypeName().equals(user2)){
-                return "employer";
+                rd.addFlashAttribute("user",userModel1);
+                return "redirect:../employer/home";
             }
             else if(userModel1.getUserTypeName().equals(user3)){
                 return "admin";

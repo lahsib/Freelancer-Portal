@@ -100,16 +100,27 @@
                                     <c:choose>
                                     <c:when test="${sessionScope.user != null}">
                                         <li class="dropdown yamm-half membermenu hasmenu">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="upload/testi_03.png" alt="" class="img-circle"> <span class="caret"></span></a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://localhost:8080/img/${detail.image}.jpg" alt="" class="img-circle"> <span class="caret"></span></a>
                                             <ul class="dropdown-menu start-right">
                                                 <li class="dropdown-header">Welcome ${sessionScope.user}</li>
 
-                                                <li><a href="${pageContext.request.contextPath}/freelancer/dashboard"><span class="glyphicon glyphicon-off"></span> User Dashboard</a></li>
+                                                <c:choose>
+                                                    <c:when test="${sessionScope.userTypeName =='Employer'}">
+                                                        <li><a href="${pageContext.request.contextPath}/freelancer/dashboard"><span class="glyphicon glyphicon-off"></span> Emp Dashboard</a></li>
+
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <li><a href="${pageContext.request.contextPath}/freelancer/dashboard"><span class="glyphicon glyphicon-off"></span> User Dashboard</a></li>
+
+                                                    </c:otherwise>
+                                                </c:choose>
                                                 <li><a href=""><span class="glyphicon glyphicon-refresh"></span> Change Password</a></li>
                                                 <li><a href="${pageContext.request.contextPath}/login/logout"><span class="glyphicon glyphicon-lock"></span> Logout</a></li>
                                             </ul>
 
+
                                     </c:when>
+
                                         <c:otherwise>
                                             <li><a href="${pageContext.request.contextPath}/user/view" role="button" data-toggle="modal" title="">Sign in</a></li>
                                             </c:otherwise>

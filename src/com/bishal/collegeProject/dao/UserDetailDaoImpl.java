@@ -1,6 +1,6 @@
 package com.bishal.collegeProject.dao;
 
-import com.bishal.collegeProject.model.FreelancerDetailModel;
+import com.bishal.collegeProject.model.UserDetailModel;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
@@ -14,9 +14,9 @@ import java.util.Map;
 /**
  * Created by user on 10/21/16.
  */
-public class FreelancerDetailDaoImpl extends JdbcTemplate implements FreelancerDetailDao {
-    public List procFreelanceDetail(FreelancerDetailModel freelancerDetailModel, String flag) {
-        String procName="proc_freelancedetail";
+public class UserDetailDaoImpl extends JdbcTemplate implements UserDetailDao {
+    public List procFreelanceDetail(UserDetailModel userDetailModel, String flag) {
+        String procName="proc_userdetail";
 
         SimpleJdbcCall call = new SimpleJdbcCall(this);
 
@@ -34,11 +34,11 @@ public class FreelancerDetailDaoImpl extends JdbcTemplate implements FreelancerD
         Map<String, Object> inp = new HashMap<String, Object>();
 
         inp.put("in_flag", flag);
-        inp.put("in_profile_id", freelancerDetailModel.getDetailId());
-        inp.put("in_description", freelancerDetailModel.getDescription());
-        inp.put("in_price", freelancerDetailModel.getPrice());
-        inp.put("in_image", freelancerDetailModel.getImage());
-        inp.put("in_user_id", freelancerDetailModel.getUserId());
+        inp.put("in_profile_id", userDetailModel.getDetailId());
+        inp.put("in_description", userDetailModel.getDescription());
+        inp.put("in_price", userDetailModel.getPrice());
+        inp.put("in_image", userDetailModel.getImage());
+        inp.put("in_user_id", userDetailModel.getUserId());
 
 
         Map<String,Object> resultMap = call.execute(inp);

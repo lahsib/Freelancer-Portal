@@ -1,6 +1,6 @@
 package com.bishal.collegeProject.mapper;
 
-import com.bishal.collegeProject.model.FreelancerDetailModel;
+import com.bishal.collegeProject.model.UserDetailModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,34 +10,34 @@ import java.util.Map;
  * Created by user on 10/21/16.
  */
 public class FreelancerDetailMapper {
-    public List<FreelancerDetailModel> mapList(List<Map> list) {
+    public List<UserDetailModel> mapList(List<Map> list) {
 
-        List<FreelancerDetailModel> resultList = new ArrayList<FreelancerDetailModel>();
+        List<UserDetailModel> resultList = new ArrayList<UserDetailModel>();
 
-        FreelancerDetailModel freelancerDetailModel;
+        UserDetailModel userDetailModel;
 
         if (!list.isEmpty()) {
             for (Map m : list) {
-                freelancerDetailModel = mapRow(m);
-                resultList.add(freelancerDetailModel);
+                userDetailModel = mapRow(m);
+                resultList.add(userDetailModel);
             }
         }
 
         return resultList;
     }
 
-    public FreelancerDetailModel mapRow(Map map) {
+    public UserDetailModel mapRow(Map map) {
         System.out.println(map);
 
-        FreelancerDetailModel freelancerDetailModel = new FreelancerDetailModel();
+        UserDetailModel userDetailModel = new UserDetailModel();
 
-        freelancerDetailModel.setDetailId(map.get("id").toString());
-        freelancerDetailModel.setDescription(map.get("description").toString());
-        freelancerDetailModel.setPrice(map.get("price").toString());
-        freelancerDetailModel.setUserId(map.get("user_id").toString());
-        freelancerDetailModel.setImage(map.get("image").toString());
+        userDetailModel.setDetailId(map.get("id").toString());
+        userDetailModel.setDescription(map.get("description").toString());
+        userDetailModel.setPrice(map.get("price").toString());
+        userDetailModel.setUserId(map.get("user_id").toString());
+        userDetailModel.setImage(map.get("image").toString());
 
-        return freelancerDetailModel;
+        return userDetailModel;
     }
 
 }

@@ -131,6 +131,38 @@
 
                         </ul><!-- end check -->
                     </div><!-- end link-widget -->
+                </div>
+                <div class="widget post-padding clearfix">
+                    <div class="widget-title">
+                        <h4>Projects Done <a href="${pageContext.request.contextPath}/freelancerProject/add" class="pull-right"><i class="glyphicon glyphicon-plus"></i> </a></h4>
+                    </div><!-- end widget-title -->
+
+                    <div class="link-widget">
+                            <c:forEach items="${fproject}" var="fproject">
+                                <div class="row">
+                                <div class="service-tab">
+                                    <div class="pull-right">
+                                        <a href="${pageContext.request.contextPath}/freelancerProject/edit/${fproject.id}" class="btn btn-success btn-xs "><i class="glyphicon glyphicon-pencil"></i> </a>
+                                        <a href="${pageContext.request.contextPath}/freelancerProject/delete/${fproject.id}" class="btn btn-danger btn-xs " onclick="return confirm('Are you sure you want to delete this item?');"><i class="glyphicon glyphicon-trash"></i> </a>
+                                    </div>
+                                    <div class="service-title">
+                                        <h4><a href="#">${fproject.projectName}</a></h4>
+                                    </div>
+
+                                    <div>
+                                        <p>${fproject.projectDesc}</p>
+                                    </div>
+                                    <div class="service-title">
+                                            <a href="#">${fproject.projectUrl}</a><br>
+                                        Completed In - ${fproject.time}
+                                    </div>
+
+                                </div>
+                            </div>
+                                <hr>
+                            </c:forEach>
+
+                    </div><!-- end link-widget -->
                 </div><!-- end post-padding -->
             </div><!-- end col -->
         </div><!-- end row -->
